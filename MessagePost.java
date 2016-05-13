@@ -16,4 +16,11 @@ public class MessagePost extends Post
     public String getMessage() {
         return message;
     }
+    
+    /**
+     * Muestra por pantalla quien es el autor del post
+     */
+    public void printShortSummary() {
+        System.out.println("Esto es un post de texto creado por " + getUsername());
+    }
 }

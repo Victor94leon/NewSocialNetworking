@@ -46,7 +46,14 @@ public class Post
     public long getTimeStamp() {
         return timestamp;
     }
-
+    
+    /**
+     * Devuelve el username
+     */
+    public String getUsername() {
+        return username;
+    }
+    
     /**
      * Metodo para pasar el tiempo a minutos y segundos.
      */
