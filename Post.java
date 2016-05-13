@@ -59,4 +59,21 @@ public class Post
         info += sec + " Seconds\n";
         return info;
     }
+
+    /**
+     * Metodo que muestra toda la info del post
+     */
+    public void display(){
+        String info = "";
+        long time = System.currentTimeMillis() - getTimeStamp();
+        info += username + "\n=====================\n" + "Posted: ";
+        info += timeString(time);
+        info += "_____________________\nLikes: " + likes + "\n=====================\n\n";
+        if(comments.size() != 0)
+            for(int i=0; i<comments.size(); i++)
+                info += comments.get(i) + "\n_____________________\n";
+        else
+            info += "Sin comentarios";
+        System.out.println(info);
+    }
 }
