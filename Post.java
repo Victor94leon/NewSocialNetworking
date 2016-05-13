@@ -48,21 +48,15 @@ public class Post
     }
 
     /**
-     * Devuelve un String que representa el momento de creación del post
+     * Metodo para pasar el tiempo a minutos y segundos.
      */
-    public String timeString(long time) {
-        int segundos = (int)(time - timestamp)/1000;
-        String cadena = segundos + " segundos";
-        if(segundos>=60) {
-            int minutos = segundos/60;
-            segundos = segundos%60;
-            cadena = minutos + " minutos " + segundos + " segundos";
-            if(minutos>=60) {
-                int horas = minutos/60;
-                minutos = minutos%60;
-                cadena = horas + " horas " + minutos + " minutos " + segundos + " segundos";
-            }
-        }
-        return cadena;
-    } 
+    private String timeString(long time){
+        String info = "";
+        int sec =  (int)(time / 1000) % 60;
+        int min =  (int)((time / (1000*60)) % 60);
+        if(min > 0)
+            info += min + " Minutes, ";
+        info += sec + " Seconds\n";
+        return info;
+    }
 }
