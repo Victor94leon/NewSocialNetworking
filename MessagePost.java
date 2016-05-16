@@ -1,4 +1,4 @@
-public class MessagePost extends Post
+public class MessagePost extends CommentsPost
 {
     private String message;
     /**

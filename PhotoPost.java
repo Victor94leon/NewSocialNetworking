@@ -1,4 +1,4 @@
-public class PhotoPost extends Post
+public class PhotoPost extends CommentsPost
 {
     private String filename;
     private String caption;
