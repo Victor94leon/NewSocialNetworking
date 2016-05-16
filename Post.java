@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+
 public class Post
 {
     private String username;
     private long timestamp;
     private int likes;
-    private ArrayList<String> comments;
+
 
     /**
      * Constructor de objetos de la clase Post
@@ -13,8 +13,7 @@ public class Post
     {
         username = author;
         timestamp = System.currentTimeMillis();
-        likes = 0;
-        comments = new ArrayList<String>();
+        likes = 0; 
     }
 
     /**
@@ -33,12 +32,7 @@ public class Post
         }
     }
 
-    /**
-     * Añade un comentario
-     */
-    public void addComment(String text) {
-        comments.add(text);
-    }
+
 
     /**
      * Devuelve el tiempo
@@ -76,11 +70,6 @@ public class Post
         info += username + "\n=====================\n" + "Posted: ";
         info += timeString(time);
         info += "_____________________\nLikes: " + likes + "\n=====================\n\n";
-        if(comments.size() != 0)
-            for(int i=0; i<comments.size(); i++)
-                info += comments.get(i) + "\n_____________________\n";
-        else
-            info += "Sin comentarios";
         System.out.println(info);
     }
 }
