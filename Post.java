@@ -5,7 +5,6 @@ public class Post
     private long timestamp;
     private int likes;
 
-
     /**
      * Constructor de objetos de la clase Post
      */

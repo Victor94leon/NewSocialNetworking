@@ -1,12 +1,13 @@
-public class JoinGroupPost
+public class JoinGroupPost extends Post
 {
     private String groupName;
 
     /**
      * Constructor for objects of class JoinGroupPost
      */
-    public JoinGroupPost(String groupName)
+    public JoinGroupPost(String author,String groupName)
     {
+        super(author);
         this.groupName = groupName;
     }
     
