@@ -1,9 +1,7 @@
-import java.util.ArrayList;
 public class PhotoPost extends Post
 {
     private String filename;
     private String caption;
-    private ArrayList<String> comments;
     /**
      * Constructor for objects of class PhotoPost
      */
@@ -12,7 +10,6 @@ public class PhotoPost extends Post
         super(author);
         this.filename = filename;
         this.caption = caption;
-        comments = new ArrayList<String>();
     }
 
     /**
@@ -27,12 +24,5 @@ public class PhotoPost extends Post
      */
     public String getCaption(){
         return caption;
-    }
-
-    /**
-     * Añade un comentario
-     */
-    public void addComment(String text) {
-        comments.add(text);
     }
 }

@@ -1,7 +1,6 @@
 public class JoinGroupPost extends Post
 {
     private String groupName;
-
     /**
      * Constructor for objects of class JoinGroupPost
      */
